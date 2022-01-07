@@ -1,10 +1,11 @@
 package entity
 
-// 实体对象
-type UrlInfo struct {
+import "time"
+
+type Urlinfo struct {
 	Id         int64
 	Surl       string
 	Lurl       string
-	views      int
-	createTime int64
+	Views      int
+	Createtime time.Time
 }
