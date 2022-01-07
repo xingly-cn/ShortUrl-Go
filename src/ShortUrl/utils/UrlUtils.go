@@ -2,8 +2,9 @@ package utils
 
 import "regexp"
 
-func UrlCheck(url string) bool {
+// Url 格式检查
+func UrlCheck(url string) (bool, error) {
 	pattern := "^(((ht|f)tps?):\\/\\/)?[\\w-]+(\\.[\\w-]+)+([\\w.,@?^=%&:/~+#-]*[\\w@?^=%&/~+#-])?$"
-	flag, _ := regexp.Match(pattern, []byte(url))
-	return flag
+	flag, err := regexp.Match(pattern, []byte(url))
+	return flag, err
 }
