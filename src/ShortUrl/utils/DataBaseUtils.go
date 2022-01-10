@@ -8,7 +8,7 @@ import (
 )
 
 func GetSQL() *gorm.DB {
-	db, err := gorm.Open("mysql", "root:XNXxnx520@(8.142.199.134:3306)/shorturl?charset=utf8mb4")
+	db, err := gorm.Open("mysql", "root:******@(8.142.199.134:3306)/shorturl?charset=utf8mb4")
 	if err != nil {
 		log.Println("连接数据库异常：", err)
 	}
@@ -18,7 +18,7 @@ func GetSQL() *gorm.DB {
 func GetRedis() *redis.Client {
 	rdb := redis.NewClient(&redis.Options{
 		Addr:     "175.27.243.243:6379",
-		Password: "213879",
+		Password: "*****",
 		DB:       0,
 	})
 	_, err := rdb.Ping().Result()
