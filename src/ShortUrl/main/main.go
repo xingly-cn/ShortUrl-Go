@@ -106,11 +106,12 @@ func main() {
 
 	r := gin.Default()
 
-	utils.GetRedis()
 
 	// 用户功能
 	r.POST("/make", add)
 	r.GET("/go/:hash", visit)
+	
+	// 管理管理 - 未完待续
 
 	// 404 处理
 	r.NoRoute(func(c *gin.Context) {
